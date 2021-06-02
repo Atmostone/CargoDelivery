@@ -108,7 +108,7 @@ class Transport(models.Model):
         ('SHIP', 'Корабль'),
     )
     transport_type = models.CharField(max_length=5, choices=TRANSPORT_TYPE_SET, verbose_name='Тип транспорта')
-    number = models.CharField(max_length=20, blank=True, verbose_name='Номер транспорта')
+    number = models.CharField(max_length=20, blank=True, verbose_name='Название или номер транспорта')
     company = models.ForeignKey(Company, on_delete=models.CASCADE, verbose_name='Компания')
 
     def __str__(self):

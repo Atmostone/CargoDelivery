@@ -344,6 +344,7 @@ class ApplicationListManage(LoginRequiredMixin, ListView):
     model = Application
     paginate_by = settings.PAGINATION_SIZE
     template_name = 'company/applications.html'
+    success_url = reverse_lazy('company:listapplicationmanage')
 
     def get_queryset(self):
         """

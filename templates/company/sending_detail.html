@@ -64,7 +64,7 @@
                     <div class="progress">
                         <div class="progress-bar bg-success" role="progressbar"
                              style="width: {{ sending.free_volume|mul:100|intdiv:sending.total_volume }}%;">
-                            <b>{{ sending.free_volume|div:sending.total_volume|mul:100 }}%</b>
+                            <b>{{ sending.free_volume|div:sending.total_volume|mul:100|floatformat }}%</b>
                         </div>
                     </div>
                     <br><br>

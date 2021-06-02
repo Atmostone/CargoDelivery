@@ -68,7 +68,7 @@
                                 <div class="progress">
                                     <div class="progress-bar bg-success" role="progressbar"
                                          style="width: {{ sending.free_volume|mul:100|intdiv:sending.total_volume }}%;">
-                                        <b>{{ sending.free_volume|div:sending.total_volume|mul:100 }}%</b>
+                                        <b>{{ sending.free_volume|div:sending.total_volume|mul:100|floatformat }}%</b>
                                     </div>
                                 </div>
                                 <br><br>
@@ -90,8 +90,8 @@
                                 </ul>
                                 <hr>
                                 <p>
-                                    <a class="btn btn-primary"
-                                       href="{% url 'company:sendingdetail' sending.pk %}">Подробнее</a>
+                                    <a class="btn btn-outline-primary"
+                                       href="{% url 'company:sendingdetail' sending.pk %}"><b>Подробнее</b></a>
                                     <a class="btn btn-warning"
                                        href="{% url 'company:updatesending' sending.pk %}">Редактировать</a>
                                     <a class="btn btn-danger"
